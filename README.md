@@ -1,12 +1,12 @@
 # D.A.V.E
-Dynamic Autonomous Vehicular Explorer 
+Dynamic Autonomous Vehicular Explorer <br/>
 
-To Do List:
--Gui
--Route Mapping
--Data Input / Output
--Object Detection (Ultrasonic range sensors)
--Sending data to and from a server through Wi-Fi
--Autonomous movement
--PS3 controller compatibility
--Alot more
+To Do List: <br/>
+-Gui <br/>
+-Route Mapping <br/>
+-Data Input / Output <br/>
+-Object Detection (Ultrasonic range sensors) <br/>
+-Sending data to and from a server through Wi-Fi <br/>
+-Autonomous movement <br/>
+-PS3 controller compatibility <br/>
+-Alot more <br/>
