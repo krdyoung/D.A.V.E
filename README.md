@@ -10,3 +10,5 @@ Dynamic Autonomous Vehicular Explorer <br/>
 * Autonomous movement <br/>
 * PS3 controller compatibility <br/>
 * Alot more <br/>
+
+![](http://i.imgur.com/9nRk4fK.jpg "logo")
