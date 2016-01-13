@@ -31,22 +31,32 @@ def read_front():
     front_distance = front_time_passed * 17000
     return front_distance
 
-
-
-def read_distance():
-    GPIO.output(23, True)
+def read_back():
+    GPIO.output(5, True)
     time.sleep(0.005)
-    GPIO.output(23, False)
+    GPIO.output(5, False)
 
-    while GPIO.input(24) == 0:
-        signaloff = time.time()
+    while GPIO.input(6) == 0:
+        back_signal_off = time.time()
 
-    while GPIO.input(24) == 1:
-        signalon = time.time()
+    while GPIO.input(6) == 1:
+        back_signal_on = time.time()
 
-    timepassed = signalon - signaloff
-    distance = timepassed * 17000
-    return distance
+    back_time_passed =  back_signal_on - back_signal_off
+    back_distance = back_time_passed * 17000
+    return back_distance
 
-while True:
-    print 'Distance: %f cm' %read_distance()
+def read_bottom():
+    GPIO.output(16, True)
+    time.sleep(0.005)
+    GPIO.output(16, False)
+
+    while GPIO.input(12) == 0:
+        bottom_signal_off = time.time()
+
+    while GPIO.input(12) == 1:
+        bottom_signal_on = time.time()
+
+    bottom_time_passed = bottom_signal_on - bottom_signal_off
+    bottom_distance = bottom_time_passed * 17000
+    return bottom_distance

@@ -1,11 +1,11 @@
 
-import Movement #Class which is responsible handling manual input
-import Sensors #Class which controls the ultrasonic sensors
+import Movement
+import Sensors
 
 def Main():
 
-    move = Movement() #Assigning all the functions of Movement.py to one variable
-    sense = Sensors() #Same as the above but with Sensors.py
+    move = Movement()
+    sense = Sensors()
     running = True
 
 
@@ -26,7 +26,17 @@ def Main():
             move.allStop()
 
         if input_var == 2:
-            print 'Distance: %f cm' % sense.read_distance()
+            input_var = input("Choose a side:"
+                              "1. Front"
+                              "2. Back"
+                              "3. Bottom")
+            if input_var == 1:
+                print 'Distance: %f cm' % sense.read_front()
+            if input_var == 2:
+                print 'Distance: %f cm' % sense.read_back()
+            if input_var == 3:
+                print 'Distance: %f cm' % sense.read_bottom()
+
 
 
         break
