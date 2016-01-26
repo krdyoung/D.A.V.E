@@ -28,7 +28,7 @@ def read_front():
         front_signal_on = time.time()
 
     front_time_passed = front_signal_on - front_signal_off
-    front_distance = front_time_passed * 17000
+    front_distance = front_time_passed * 170
     return front_distance
 
 def read_back():
@@ -43,7 +43,7 @@ def read_back():
         back_signal_on = time.time()
 
     back_time_passed =  back_signal_on - back_signal_off
-    back_distance = back_time_passed * 17000
+    back_distance = back_time_passed * 170
     return back_distance
 
 def read_bottom():
@@ -58,5 +58,5 @@ def read_bottom():
         bottom_signal_on = time.time()
 
     bottom_time_passed = bottom_signal_on - bottom_signal_off
-    bottom_distance = bottom_time_passed * 17000
+    bottom_distance = bottom_time_passed * 170
     return bottom_distance
