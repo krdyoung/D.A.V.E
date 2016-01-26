@@ -1,11 +1,13 @@
 
 import Movement
 import Sensors
+import Test
 
 def Main():
 
     move = Movement()
     sense = Sensors()
+    test = Test()
     running = True
 
 
@@ -13,7 +15,8 @@ def Main():
     while running: #The main loop that the vehicle will cycle through while running
         input_var = input("Choose an option:"
                       "1.  Move test"
-                      "2.  Measure distance ")
+                      "2.  Measure distance "
+                      "3.  Distance test")
         if input_var == 1 :
             move.rForward()
             move.lForward()
@@ -37,6 +40,8 @@ def Main():
             if input_var == 3:
                 print 'Distance: %f cm' % sense.read_bottom()
 
+        if input_var == 3:
+            test.WheelsTest()
 
 
         break

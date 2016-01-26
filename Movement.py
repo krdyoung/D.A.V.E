@@ -30,6 +30,16 @@ def lForward():
     GPIO.output(22, 0)
     GPIO.output(26, 1)
 
+def bothForward():
+    "L and R motor forward"
+    GPIO.output(21, 1)
+    GPIO.output(19, 0)
+    GPIO.output(23, 1)
+
+    GPIO.output(24, 1)
+    GPIO.output(22, 0)
+    GPIO.output(26, 1)
+
 def rBackward():
     "R motor backward"
     GPIO.output(21, 1)
