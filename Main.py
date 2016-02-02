@@ -10,9 +10,7 @@ def Main():
     test = Test()
     running = True
 
-
-
-    while running: #The main loop that the vehicle will cycle through while running
+    while running:
         input_var = input("Choose an option:"
                       "1.  Move test"
                       "2.  Measure distance "
@@ -42,7 +40,6 @@ def Main():
 
         if input_var == 3:
             test.WheelsTest()
-
 
         break
 
