@@ -1,8 +1,7 @@
-import Movement
+import Movement as move
 
 def WheelsTest():
 
-    move = Movement()
     time = 0
 
     move.bothForward()

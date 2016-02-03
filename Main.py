@@ -1,13 +1,10 @@
 
-import Movement
-import Sensors
-import Test
+import Movement as move
+import Sensors as sense
+import Test as test
 
 def Main():
 
-    move = Movement()
-    sense = Sensors()
-    test = Test()
     running = True
 
     while running:
