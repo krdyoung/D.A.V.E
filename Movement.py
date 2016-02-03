@@ -19,7 +19,7 @@ GPIO.setup(23, GPIO.OUT) # 24
 GPIO.setup(24, GPIO.OUT) # 26
 
 def rForward():
-    "R motor forward"
+
     GPIO.output(27, 1)
     GPIO.output(17, 0)
     GPIO.output(22, 1)
@@ -27,7 +27,7 @@ def rForward():
     print("Right Forward")
 
 def lForward():
-    "L motor forward"
+
     GPIO.output(23, 1)
     GPIO.output(18, 0)
     GPIO.output(24, 1)
@@ -35,7 +35,7 @@ def lForward():
     print("Left Forward")
 
 def bothForward():
-    "L and R motor forward"
+
     GPIO.output(27, 1)
     GPIO.output(17, 0)
     GPIO.output(22, 1)
@@ -47,7 +47,7 @@ def bothForward():
     print("Both Forward")
 
 def rBackward():
-    "R motor backward"
+
     GPIO.output(27, 1)
     GPIO.output(17, 1)
     GPIO.output(22, 0)
@@ -55,7 +55,7 @@ def rBackward():
     print("Right Backward")
 
 def lBackward():
-    "L motor backward"
+
     GPIO.output(26, 1)
     GPIO.output(18, 1)
     GPIO.output(24, 0)
