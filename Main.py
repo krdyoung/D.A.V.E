@@ -1,42 +1,42 @@
 
-import Movement as move
-import Sensors as sense
-import Test as test
+import ManualOverride as control
+import DavesBrain as automatic
 
 def Main():
 
     running = True
+    override = False
 
     while running:
-        input_var = input("Choose an option:"
-                      "1.  Move test"
-                      "2.  Measure distance "
-                      "3.  Distance test")
-        if input_var == 1 :
-            move.rForward()
-            move.lForward()
-            move.time.sleep(2)
-            move.allStop()
-            move.time.sleep(0.5)
-            move.rBackward()
-            move.lBackward()
-            move.time.sleep(2)
-            move.allStop()
+        print "1. Manual"
+        print "2. Automatic"
+        print "3. Exit"
 
-        if input_var == 2:
-            input_var = input("Choose a side:"
-                              "1. Front"
-                              "2. Back"
-                              "3. Bottom")
-            if input_var == 1:
-                print 'Distance: %f cm' % sense.read_front()
-            if input_var == 2:
-                print 'Distance: %f cm' % sense.read_back()
-            if input_var == 3:
-                print 'Distance: %f cm' % sense.read_bottom()
+        input_option = input()
+        input_option = control.verify_input(input_option)
 
-        if input_var == 3:
-            test.WheelsTest()
+        if input_option == 1:
+            override = True
+
+        if input_option == 2:
+            override = False
+            automatic.run()
+
+        if input_option == 3:
+            return
+
+        if override == True:
+            override_selection()
 
         break
 
+def override_selection():
+    print "Choose an option: "
+    print "1. Movement"
+    print "2. Sensors"
+    print "3. Cancel"
+
+    input_option = input()
+    input_option = control.verify_input(input_option)
+
+    control.control_choice(input_option)

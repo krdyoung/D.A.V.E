@@ -6,12 +6,16 @@ def Main():
 
     running = True
     objectDetected = False
+    gapDetected = False
 
     while running:
 
         move.bothForward()
 
-        while objectDetected == False:
+        while objectDetected == False & gapDetected == False:
+
+            if sense.read_bottom() > 0.75:
+                gapDetected = True
 
             if sense.readFront < 0.3 & sense.readFront > 0.01:
                 objectDetected = True
