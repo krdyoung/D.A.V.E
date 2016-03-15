@@ -1,6 +1,6 @@
 
 import ManualOverride as control
-import DavesBrain as automatic
+import Auto as automatic
 
 def Main():
 
